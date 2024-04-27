@@ -854,3 +854,20 @@ footer ul li a:hover figcaption {
     grid-column-start: 3;
   }
 }
+
+@media print {
+  html,
+  body {
+    font-family: serif;
+    margin: 0.5in;
+    height: 225mm;
+    overflow: hidden;
+  }
+  nav,
+  img {
+    display: none;
+  }
+  a::after {
+    content: attr(href);
+  }
+}
